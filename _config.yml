@@ -1,6 +1,6 @@
 markdown: rdiscount
 permalink: /:year/:month/:title/
-url: http://kuangzhou.github.io
+url: http://kuangzhou.github.io/cn
 author: 周旷(KuangZHOU) 
 pygments: true
 
