@@ -6,9 +6,22 @@
     {% else %}
     <small>某年 某月 某日 | 分类于
     {% endif %}
-    {% for category in page.categories %}
-    <a href="{{ site.url }}{{ site.JB.categories_path }}#{{ category }}-ref" title="{{ category }}" rel="category">{{ category }}</a>{% unless forloop.last %}，{% endunless %}
-    {% endfor %}
+	{% if page.categories %}
+	<span class="categories">
+	  in categories
+	  {% for cat in page.categories %}
+	  <a href="{{ site.url }}/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>&nbsp;
+	  {% endfor %}
+	</span>
+	{% endif %}
+	{% if page.tags %}
+	<span class="tags">
+	  tagged with 
+	  {% for tag in page.tags %}
+	  <a href="{{ site.url }}/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>&nbsp;
+	  {% endfor %}
+	</span>
+	{% endif %}
     </small>
   </div><!-- END title -->
 			
