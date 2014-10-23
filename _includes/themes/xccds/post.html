@@ -7,7 +7,7 @@
     <small>某年 某月 某日 | 分类于
     {% endif %}
     {% for category in page.categories %}
-    <a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ category }}-ref" title="{{ category }}" rel="category">{{ category }}</a>{% unless forloop.last %}，{% endunless %}
+    <a href="{{ site.url }}{{ site.JB.categories_path }}#{{ category }}-ref" title="{{ category }}" rel="category">{{ category }}</a>{% unless forloop.last %}，{% endunless %}
     {% endfor %}
     </small>
   </div><!-- END title -->
@@ -20,7 +20,7 @@
   <p class="postmetadata">
     <span class="category">
       {% for tag in page.tags %}
-      <a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref"" rel="tag">{{ tag }}</a>
+      <a href="{{ site.url }}{{ site.JB.tags_path }}#{{ tag }}-ref"" rel="tag">{{ tag }}</a>
       {% endfor %}
     </span>
   </p>
