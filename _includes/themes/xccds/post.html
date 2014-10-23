@@ -2,9 +2,9 @@
   <div class="title">
     <h2>{{ page.title }}</h2>
     {% if page.date %}
-    <small>{{ page.date | date: "%Y 年 %m 月 %d 日" }} | 分类于
+    <small>{{ page.date | date: "%Y - %m - %d " }} | 
     {% else %}
-    <small>某年 某月 某日 | 分类于
+    <small> Year - Month - Day | 
     {% endif %}
 	{% if page.categories %}
 	<span class="categories">
