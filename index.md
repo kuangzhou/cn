@@ -49,6 +49,5 @@ layout: page
   {% else %}
     <span class="next disabled" >后页></span>
   {% endif %}
-  (共{{ paginator.total_posts }}篇)
 </div>
 
