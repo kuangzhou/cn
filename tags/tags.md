@@ -9,8 +9,8 @@ permalink: /tags/
 
 
 <div class="accordion-box" id="cat-accordion">
-{% for tag in site.tags %} 
-  <h3 id="{{ tag[0] }}-ref">{{ tag[0] | join: "/" }} &times; {{tag[1].size}}</h3>
+{% for tags in site.tags %} 
+  <h3 id="{{ tags[0] }}-ref">{{ tags[0] | join: "/" }} &times; {{tags[1].size}}</h3>
   <div>
     <ul>
     {% assign pages_list = tag[0] %}  
