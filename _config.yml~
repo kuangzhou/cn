@@ -1,6 +1,0 @@
-markdown: rdiscount
-permalink: /:year/:month/:title/
-url: http://kuangzhou.github.io
-author: 周旷 
-pygments: true
-
