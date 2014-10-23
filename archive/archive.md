@@ -2,6 +2,7 @@
 layout: page_no_comment
 title : 博文目录 
 group: no_navigation
+permalink: /archive/
 ---
 {% include JB/setup %}
 
