@@ -151,7 +151,7 @@
               <h2 class="blocktitle"><span>分类目录</span></h2>
                <div id="tag_cloud">
                {% for category in site.categories %}
-               <a href="{{ site.url }}{{ site.JB.categories_path }}#{{ category[0] }}-ref" title="{{ category[0] }}" rel="{{ category[1].size }}">{{ category[0] }}&nbsp;</a>
+               <a href="{{ site.url }}{{ site.JB.categories_path }}#{{ category[0] }}" title="{{ category[0] }}" rel="{{ category[1].size }}">{{ category[0] }}&nbsp;</a>
 	{% endfor %}</div>		       
             </li>
             
