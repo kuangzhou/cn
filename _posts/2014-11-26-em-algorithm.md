@@ -49,10 +49,10 @@ $$Q(\theta^{(q+1)},\theta^{(q)})\geq Q(\theta^{(q)},\theta^{(q)}).$$
 $$H(\theta^{(q+1)},\theta^{(q)}) \leq H(\theta^{(q)},\theta^{(q)}).$$
 事实上，对任意的$\theta$,
 $$H(\theta,\theta^{(q)}) - H(\theta^{(q)},\theta^{(q)})
-=\mathrm{E}\left[\log g(x|A;\theta)|A;\theta^{(q)}\right]-\mathrm{E}\left[\log g(x|A;\theta^{(q)})|A;\theta^{(q)}\right]\\
-=\mathrm{E}\left[\left.\log \frac{g(x|A;\theta)}{g(x|A;\theta^{(q)})}\middle| A;\theta^{(q)}\right.\right]\\
-\leq \log \mathrm{E}\left[ \left.\frac{g(x|A;\theta)}{g(x|A;\theta^{(q)})}\middle| A;\theta^{(q)}\right.\right]\\
-=\log \int \frac{g(x|A;\theta)}{g(x|A;\theta^{(q)})} g(x|A;\theta^{(q)}) \mathrm{d}x \\
+=\mathrm{E}\left[\log g(x|A;\theta)|A;\theta^{(q)}\right]-\mathrm{E}\left[\log g(x|A;\theta^{(q)})|A;\theta^{(q)}\right]\\\\
+=\mathrm{E}\left[\left.\log \frac{g(x|A;\theta)}{g(x|A;\theta^{(q)})}\middle| A;\theta^{(q)}\right.\right]\\\\
+\leq \log \mathrm{E}\left[ \left.\frac{g(x|A;\theta)}{g(x|A;\theta^{(q)})}\middle| A;\theta^{(q)}\right.\right]\\\\
+=\log \int \frac{g(x|A;\theta)}{g(x|A;\theta^{(q)})} g(x|A;\theta^{(q)}) \mathrm{d}x \\\\
 =\log \int p_X(x|A;\theta) \mathrm{d}x=0.$$
 上式中的不等号是由Jensen不等式得到的。
 
