@@ -76,5 +76,7 @@ $K$-means通过更新两种变量来极小化目标函数，类中心和隶属�
 上述观点仅代表自己的理解。如果错误，欢迎指正。 参考资料：
 
 [Standford machine learning 讲义](http://cs229.stanford.edu/notes/cs229-notes8.pdf)
+
+
 [Dempster 论文](http://web.mit.edu/6.435/www/Dempster77.pdf)
 
