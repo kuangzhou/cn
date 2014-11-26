@@ -21,7 +21,7 @@ $$ \log L(\theta;x)= \log p_X(x;\theta).$$
 迭代过程如下：
 
 E-step: 计算完全对数似然函数在观测样本下的条件期望：
-$$Q(\theta,\theta^{(q)})=\mathrm{E}_{\theta^{(q)}}\left[\log L(\theta;x)|A\right].$$
+$$Q(\theta,\theta^{(q)})=\mathrm{E}_{\theta^{(q)}}\left[\left.\log L(\theta;x)\middle|A\right.\right].$$
 
 M-step: 极大化E步计算的Q函数(拟似然函数)。
 
@@ -43,7 +43,7 @@ $$\log L(\theta;A)=\mathrm{E}\left[\left.\log L(\theta;x)\middle|A;\theta^{(q)}\
 \\\\ \triangleq Q(\theta,\theta^{(q)})-H(\theta,\theta^{(q)}).$$
 我们需要证明
 $$L(\theta^{(q+1)},\theta^{(q)}) \geq L(\theta^{(q)},\theta^{(q)}).$$
-可以看到，对数观测似然函数可以分解了$Q$和$H$两部分。其中$Q$就是我们要在E步计算的条件期望，也是在M步要对$\theta$求极大化的函数。所以，通过M步，便有会
+可以看到，对数观测似然函数可以分解为$Q$和$H$两部分。其中$Q$就是我们要在E步计算的条件期望，也是在M步要对$\theta$求极大化的函数。所以，通过M步，便有会
 $$Q(\theta^{(q+1)},\theta^{(q)})\geq Q(\theta^{(q)},\theta^{(q)}).$$
 于是，下面只需要证明
 $$H(\theta^{(q+1)},\theta^{(q)}) \leq H(\theta^{(q)},\theta^{(q)}).$$
