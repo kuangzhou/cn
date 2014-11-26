@@ -58,7 +58,7 @@ $$H(\theta,\theta^{(q)}) - H(\theta^{(q)},\theta^{(q)})
 
 从上面的证明过程可以看出，M步造成了$Q$部分的增加，而E步造成了$H$部分的增加。所以，经过一次交替的迭代，观测似然函数总是不减的。
 
-Remark: 这种证明方法更能体现EM算法的实施过程。参考文献中[Standford的EM讲义](http://cs229.stanford.edu/notes/cs229-notes8.pdf)给出了另一种证明，其思路是不断地优化下界，更能体现EM算法的收敛本质。两种证明方法是等价的。
+Remark: 这种证明方法更能体现EM算法的实施过程。参考文献中[Stanford的EM讲义](http://cs229.stanford.edu/notes/cs229-notes8.pdf)给出了另一种证明，其思路是不断地优化下界，更能体现EM算法的收敛本质。两种证明方法是等价的。
 
 
 ## 总结
@@ -78,7 +78,7 @@ $K$-means通过更新两种变量来极小化目标函数，类中心和隶属�
 
 ## 参考资料
 
-[Standford machine learning 讲义](http://cs229.stanford.edu/notes/cs229-notes8.pdf)
+[Stanford machine learning 讲义](http://cs229.stanford.edu/notes/cs229-notes8.pdf)
 
 
 [Dempster 论文](http://web.mit.edu/6.435/www/Dempster77.pdf)
