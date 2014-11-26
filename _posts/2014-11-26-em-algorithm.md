@@ -40,7 +40,7 @@ $$\log L(\theta;A)=\log L(\theta;x)-\log g(x|A;\theta).$$
 两边对$p_X(x|x\in A;\theta^{(q)})$条件期望可得：
 
 $$\log L(\theta;A)=\mathrm{E}\left[\log L(\theta;x)|A;\theta^{(q)}\right]-\mathrm{E}\left[\log g(x|A;\theta)|A;\theta^{(q)}\right]
-\\\triangleq Q(\theta,\theta^{(q)})-H(\theta,\theta^{(q)}).$$
+\\ \triangleq Q(\theta,\theta^{(q)})-H(\theta,\theta^{(q)}).$$
 我们需要证明
 $$L(\theta^{(q+1)},\theta^{(q)}) \geq L(\theta^{(q)},\theta^{(q)}).$$
 可以看到，对数观测似然函数可以分解了$Q$和$H$两部分。其中$Q$就是我们要在E步计算的条件期望，也是在M步要对$\theta$求极大化的函数。所以，通过M步，便有会
