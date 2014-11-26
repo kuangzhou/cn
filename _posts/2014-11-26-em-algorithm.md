@@ -39,7 +39,7 @@ $$\log L(\theta;A)=\log L(\theta;x)-\log g(x|A;\theta).$$
 
 两边对$p_X(x|x\in A;\theta^{(q)})$条件期望可得：
 
-$$\log L(\theta;A)=\mathrm{E}\left[\log L(\theta;x)|A;\theta^{(q)}\right]-\mathrm{E}\left[\log g(x|A;\theta)|A;\theta^{(q)}\right]
+$$\log L(\theta;A)=\mathrm{E}\left[\left.\log L(\theta;x)\middle|A;\theta^{(q)}\right.\right]-\mathrm{E}\left[\left.\log g(x|A;\theta)\middle|A;\theta^{(q)}\right.\right]
 \\\\ \triangleq Q(\theta,\theta^{(q)})-H(\theta,\theta^{(q)}).$$
 我们需要证明
 $$L(\theta^{(q+1)},\theta^{(q)}) \geq L(\theta^{(q)},\theta^{(q)}).$$
