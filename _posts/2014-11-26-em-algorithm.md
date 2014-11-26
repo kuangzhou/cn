@@ -5,7 +5,7 @@ layout: post
 output: html_document
 tags:
 - EM
-- incomplete data
+- Incomplete data
 - MLE
 category: 模式识别
 ---
