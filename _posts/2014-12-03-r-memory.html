@@ -65,20 +65,20 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <li>在循环中尽量少用cbind, rbind。R当中处理矩阵的时候没有维数的限制，这给我们带来了很大的方便。但是，如果我们对矩阵进行扩充，如用<span class="math">\(\text{x=cbind(x,temp)}\)</span>时，系统会开辟新的连续空间给最新的x。这样会造成内存的浪费。因此，如果能事先给定最终所得扩充后矩阵<span class="math">\(X\)</span>的维数，那么系统只需要开辟一个连续的空间。</li>
 </ol>
 <p>用cbind合并的例子：</p>
-<pre class="r"><code>rm(list=ls())
+<pre class="r"><code>rm(list = ls())
 gc()</code></pre>
 <pre><code>##          used (Mb) gc trigger (Mb) max used (Mb)
-## Ncells 247880 13.3     407500 21.8   350000 18.7
-## Vcells 447221  3.5     905753  7.0   859561  6.6</code></pre>
+## Ncells 247876 13.3     407500 21.8   350000 18.7
+## Vcells 447213  3.5     905753  7.0   859561  6.6</code></pre>
 <pre class="r"><code>a = memory.size(F)
-N=1000
-x=c()
+N = 1000
+x = c()
 for(i in 1:1000){
-  x=cbind(matrix(runif(N),N,1),x);
+  x = cbind(matrix(runif(N),N,1),x);
 }
 dim(x)</code></pre>
 <pre><code>## [1] 1000 1000</code></pre>
-<pre class="r"><code>b= memory.size(F)
+<pre class="r"><code>b = memory.size(F)
 # 内存增加了:
 b-a</code></pre>
 <pre><code>## [1] 23.02</code></pre>
@@ -86,8 +86,8 @@ b-a</code></pre>
 <pre class="r"><code>rm(list = ls())
 gc()</code></pre>
 <pre><code>##          used (Mb) gc trigger (Mb) max used (Mb)
-## Ncells 248880 13.3     467875 25.0   432229 23.1
-## Vcells 447992  3.5    3095788 23.7  3590967 27.4</code></pre>
+## Ncells 248876 13.3     467875 25.0   432222 23.1
+## Vcells 447981  3.5    3095788 23.7  3590967 27.4</code></pre>
 <pre class="r"><code>a = memory.size(F)
 N = 1000
 x = matrix(0,N,1000);
@@ -104,8 +104,8 @@ b-a</code></pre>
 <pre class="r"><code>rm(list = ls())
 gc()</code></pre>
 <pre><code>##          used (Mb) gc trigger (Mb) max used (Mb)
-## Ncells 248913 13.3     467875 25.0   447341 23.9
-## Vcells 448216  3.5    2476630 18.9  3590967 27.4</code></pre>
+## Ncells 248909 13.3     467875 25.0   447337 23.9
+## Vcells 448205  3.5    2476630 18.9  3590967 27.4</code></pre>
 <pre class="r"><code>a = memory.size(F)
 N = 1000
 x = c()
@@ -141,7 +141,7 @@ for (i in 1:nrow(x))
 }
 proc.time()-ptm</code></pre>
 <pre><code>##    user  system elapsed 
-##    0.11    0.00    0.11</code></pre>
+##    0.10    0.00    0.11</code></pre>
 <p>用矩阵化的思想：</p>
 <pre class="r"><code>data(iris)
 x = as.matrix(iris[,1:4]);
@@ -153,7 +153,7 @@ for (i in 1:nrow(x)){
 }
 proc.time()-ptm</code></pre>
 <pre><code>##    user  system elapsed 
-##    0.02    0.00    0.02</code></pre>
+##    0.01    0.00    0.02</code></pre>
 <p>两者的计算是等价的</p>
 <pre class="r"><code>sum(dis1!=dis)</code></pre>
 <pre><code>## [1] 0</code></pre>
